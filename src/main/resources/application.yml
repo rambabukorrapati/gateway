@@ -20,5 +20,5 @@ spring:
          - id: bookmanagement
            uri: https://kamalabookmanagement.onrender.com
            predicates:
-             -Path=/catalog/**
+             - Path=/catalog/**
 
