@@ -1,0 +1,24 @@
+
+server:
+  port:8080
+
+spring:
+    cloud:
+      gateway:
+        routes:
+         - id: userservice
+           uri: https://kamalauserservice.onrender.com
+           predicates:
+            - Path=/user/**
+
+
+         - id: bookservice
+           uri: https://kamalabookservice.onrender.com
+           predicates:
+             - Path=/book/**
+
+         - id: bookmanagement
+           uri: https://kamalabookmanagement.onrender.com
+           predicates:
+             -Path=/catalog/**
+
