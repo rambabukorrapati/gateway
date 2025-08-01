@@ -10,15 +10,21 @@ spring:
            uri: https://kamalauserservice.onrender.com
            predicates:
             - Path=/user/**
+           filters:
+            - StripPrefix=1
 
 
          - id: bookservice
            uri: https://kamalabookservice.onrender.com
            predicates:
              - Path=/book/**
+           filters:
+             - StripPrefix=1
 
          - id: bookmanagement
            uri: https://kamalabookmanagement.onrender.com
            predicates:
              - Path=/catalog/**
+           filters:
+             - StripPrefix=1
 
