@@ -6,22 +6,22 @@ spring:
     cloud:
       gateway:
         routes:
-         - id: userservice
-           uri: https://kamalauserservice.onrender.com
+         - id: user service
+           uri: https://kamalauserservice.onrender.com/user/register
            predicates:
             - Path=/user/**
            filters:
             - StripPrefix=1
 
 
-         - id: bookservice
-           uri: https://kamalabookservice.onrender.com
+         - id: book service
+           uri: https://kamalabookservice.onrender.com/book/list
            predicates:
              - Path=/book/**
            filters:
              - StripPrefix=1
 
-         - id: bookmanagement
+         - id: book management
            uri: https://kamalabookmanagement.onrender.com
            predicates:
              - Path=/catalog/**
